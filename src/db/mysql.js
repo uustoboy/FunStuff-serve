@@ -3,7 +3,7 @@ const {MYSQL_CONF} = require('../conf/db')
 
 const  con = mysql.createConnection(MYSQL_CONF)
 
-con.connect();
+
 function exec(sql){
   const promise = new Promise((resolve,reject)=>{
 
@@ -20,7 +20,7 @@ function exec(sql){
   })
   return promise
 }
-
+con.connect();
 module.exports = {
   exec
 }
