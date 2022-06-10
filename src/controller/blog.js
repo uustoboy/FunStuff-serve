@@ -23,10 +23,10 @@ const newBlog = (blogData={})=>{
   const content = blogData.content
   const author = blogData.author
   const createtime = Date.now()
+  
   const sql = `insert into blogs(title,content,author,createtime) values('${title}','${content}','${author}','${createtime}')`
  
   return exec(sql).then(insertData =>{
-    console.log(insertData)
     return {
       id: insertData.insertId
     }
