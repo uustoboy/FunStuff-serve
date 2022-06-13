@@ -1,5 +1,5 @@
 const { getList,getDetail,newBlog,updateBlog,delBlog } = require('../controller/blog')
-const { SuccessModel,ErrorModel } = require('../model/resModel')
+const { SuccessModel,ErrorModel } = require(  '../model/resModel')
 
 //统一公共登录验证函数
 const loginCheck = (req)=>{
